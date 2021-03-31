@@ -1,4 +1,4 @@
-package com.timo.lingoapplication.wordImporter.application;
+package com.timo.lingoapplication.wordimporter.application;
 
 import java.util.stream.Stream;
 

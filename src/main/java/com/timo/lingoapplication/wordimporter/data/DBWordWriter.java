@@ -1,8 +1,8 @@
-package com.timo.lingoapplication.wordImporter.data;
+package com.timo.lingoapplication.wordimporter.data;
 
 import com.timo.lingoapplication.word.application.WordService;
 import com.timo.lingoapplication.word.domain.Word;
-import com.timo.lingoapplication.wordImporter.domain.WordFilter;
+import com.timo.lingoapplication.wordimporter.domain.WordFilter;
 
 import java.util.List;
 

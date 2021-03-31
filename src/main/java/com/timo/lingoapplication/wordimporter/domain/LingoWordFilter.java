@@ -1,4 +1,4 @@
-package com.timo.lingoapplication.wordImporter.domain;
+package com.timo.lingoapplication.wordimporter.domain;
 
 public class LingoWordFilter implements WordFilter {
     @Override
