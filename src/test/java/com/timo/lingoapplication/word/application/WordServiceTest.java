@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 @DisplayName("WordServiceTest")
-public class WordServiceTest {
+class WordServiceTest {
 
     private static final Word word = new Word(1L, "achter");
 
