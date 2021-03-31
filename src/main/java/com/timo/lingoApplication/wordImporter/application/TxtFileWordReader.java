@@ -2,6 +2,7 @@ package com.timo.lingoApplication.wordImporter.application;
 
 import com.timo.lingoApplication.shared.exception.CannotReadWords;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -10,6 +11,7 @@ import java.util.stream.Stream;
 
 @Slf4j
 public class TxtFileWordReader implements WordReader {
+    @Value("${wordSource}")
     private final Path source;
 
     public TxtFileWordReader(Path source) {
@@ -19,7 +21,7 @@ public class TxtFileWordReader implements WordReader {
     @Override
     public Stream<String> readWords() {
         try {
-            log.info("Reading words from file {}", this.source);
+            System.out.println("Reading words from file " + this.source);
             return Files.lines(this.source);
         } catch (IOException e) {
             throw CannotReadWords.because(e);

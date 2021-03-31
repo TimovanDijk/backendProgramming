@@ -3,8 +3,6 @@ package com.timo.lingoApplication.wordImporter.application;
 
 
 import com.timo.lingoApplication.wordImporter.domain.WordFilter;
-import com.timo.lingoApplication.wordImporter.ports.WordReader;
-import com.timo.lingoApplication.wordImporter.ports.WordWriter;
 
 import java.util.List;
 
