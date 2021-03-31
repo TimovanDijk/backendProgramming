@@ -2,6 +2,7 @@ package com.timo.lingoApplication.wordImporter.application;
 
 
 
+import com.timo.lingoApplication.wordImporter.data.WordWriter;
 import com.timo.lingoApplication.wordImporter.domain.WordFilter;
 
 import java.util.List;

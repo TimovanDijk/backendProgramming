@@ -1,4 +1,4 @@
-package com.timo.lingoApplication.wordImporter.application;
+package com.timo.lingoApplication.wordImporter.data;
 
 import java.util.List;
 

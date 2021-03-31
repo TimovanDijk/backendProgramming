@@ -1,4 +1,4 @@
-package com.timo.lingoApplication.wordImporter.application;
+package com.timo.lingoApplication.wordImporter.data;
 
 import com.timo.lingoApplication.word.application.WordService;
 import com.timo.lingoApplication.wordImporter.data.DBWordWriter;
