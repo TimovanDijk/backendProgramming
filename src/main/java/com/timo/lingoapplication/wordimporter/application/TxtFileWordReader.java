@@ -1,6 +1,6 @@
-package com.timo.lingoapplication.wordImporter.application;
+package com.timo.lingoapplication.wordimporter.application;
 
-import com.timo.lingoapplication.wordImporter.application.exception.CannotReadWords;
+import com.timo.lingoapplication.wordimporter.application.exception.CannotReadWords;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 

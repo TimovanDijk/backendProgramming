@@ -1,4 +1,4 @@
-package com.timo.lingoapplication.wordImporter.domain;
+package com.timo.lingoapplication.wordimporter.domain;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
