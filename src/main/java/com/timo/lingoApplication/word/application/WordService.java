@@ -1,6 +1,6 @@
 package com.timo.lingoApplication.word.application;
 
-import com.timo.lingoApplication.shared.exception.WordNotFound;
+import com.timo.lingoApplication.word.application.exception.WordNotFound;
 import com.timo.lingoApplication.word.domain.Word;
 import com.timo.lingoApplication.word.persistence.WordRepository;
 import org.springframework.beans.factory.annotation.Autowired;

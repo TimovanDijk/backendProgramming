@@ -1,4 +1,4 @@
-package com.timo.lingoApplication.shared.exception;
+package com.timo.lingoApplication.wordImporter.application.exception;
 
 public class CannotReadWords extends RuntimeException {
     private CannotReadWords(Throwable cause) {

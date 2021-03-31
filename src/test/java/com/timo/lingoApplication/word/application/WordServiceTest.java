@@ -1,15 +1,11 @@
 package com.timo.lingoApplication.word.application;
 
-import com.timo.lingoApplication.shared.exception.WordNotFound;
+import com.timo.lingoApplication.word.application.exception.WordNotFound;
 import com.timo.lingoApplication.word.domain.Word;
 import com.timo.lingoApplication.word.persistence.WordRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.provider.Arguments;
 import org.mockito.Mockito;
-
-import java.util.List;
-import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
