@@ -30,7 +30,7 @@ public class WordService implements WordServiceInterface{
     @Override
     public Word getWordbyId(Long id) throws WordNotFound {
         Optional<Word> optionalWord = wordRepository.findById(id);
-        if (optionalWord.isPresent() != true) {
+        if (!optionalWord.isPresent()) {
             throw new WordNotFound(id);
         }
         return optionalWord.get();

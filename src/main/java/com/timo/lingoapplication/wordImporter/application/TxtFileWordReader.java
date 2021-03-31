@@ -21,7 +21,6 @@ public class TxtFileWordReader implements WordReader {
     @Override
     public Stream<String> readWords() {
         try {
-            System.out.println("Reading words from file " + this.source);
             return Files.lines(this.source);
         } catch (IOException e) {
             throw CannotReadWords.because(e);
