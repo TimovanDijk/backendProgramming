@@ -9,8 +9,9 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-public class WordService implements WordServiceInterface{
+public class WordService implements WordServiceInterface {
     private WordRepository wordRepository;
+
     @Autowired
     public WordService(WordRepository wordRepository) {
         this.wordRepository = wordRepository;
@@ -23,7 +24,7 @@ public class WordService implements WordServiceInterface{
     }
 
     @Override
-    public Boolean doesWordExist(String wordGuess) {
+    public boolean doesWordExist(String wordGuess) {
         return wordRepository.existsByWord(wordGuess);
     }
 
@@ -34,5 +35,16 @@ public class WordService implements WordServiceInterface{
             throw new WordNotFound(id);
         }
         return optionalWord.get();
+    }
+
+    @Override
+    public Word getRandomWord() {
+        return wordRepository.getRandomWord();
+    }
+
+    @Override
+    public boolean checkIfAnswerCorrect(String answer, Long wordId) {
+        Word word = getWordbyId(wordId);
+        return word.getWord().equals(answer);
     }
 }

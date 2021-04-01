@@ -73,4 +73,20 @@ class WordServiceTest {
 
 
     }
+
+    @Test
+    @DisplayName("CHECK FOR ERROR")
+    void checkAnswers() {
+        WordRepository wordRepository = Mockito.mock(WordRepository.class);
+
+        WordService wordService = new WordService(wordRepository);
+        when(wordRepository.findById(word.getId())).thenReturn(java.util.Optional.of(word));
+
+        boolean correct = wordService.checkIfAnswerCorrect(word.getWord(), word.getId());
+        boolean incorrect = wordService.checkIfAnswerCorrect("incorrecto" , word.getId());
+
+        assertTrue(correct == true);
+        assertTrue(incorrect == false);
+    }
+
 }
