@@ -5,10 +5,14 @@ import com.timo.lingoapplication.game.domain.Game;
 import com.timo.lingoapplication.game.domain.GameState;
 import com.timo.lingoapplication.game.domain.GameType;
 import com.timo.lingoapplication.game.persistence.GameRepository;
+import com.timo.lingoapplication.shared.message.GameStateMessage;
+import com.timo.lingoapplication.shared.message.LetterFeedbackMessage;
 import com.timo.lingoapplication.word.application.WordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -54,17 +58,19 @@ public class GameService implements GameServiceInterface {
         if (game.getGameState() != GameState.FINISHED) {
             if (roundnumber < 5) {
                 if (wordService.checkIfAnswerCorrect(answerAttempt, wordId)) {
+                    List<LetterFeedbackMessage> letterFeedback = wordService.checkLettersOfAnswer(answerAttempt, wordId);
                     game.setGameState(GameState.FINISHED);
                     game.setRoundNumber(game.getRoundNumber() + 1);
                     gameRepository.save(game);
                     Game newGame = createGame(cycleGameType(game.getGameType()));
 
-                    return new GameStateMessage(true, newGame, "Your answer of: " + answerAttempt + " is correct!");
+                    return new GameStateMessage(true, newGame, "Your answer of: " + answerAttempt + " is correct!", letterFeedback);
                 } else {
+                    List<LetterFeedbackMessage> letterFeedback = wordService.checkLettersOfAnswer(answerAttempt, wordId);
                     game.setRoundNumber(game.getRoundNumber() + 1);
                     gameRepository.save(game);
 
-                    return new GameStateMessage(false, game, "Your answer of: " + answerAttempt + " is not correct.");
+                    return new GameStateMessage(false, game, "Your answer of: " + answerAttempt + " is not correct.", letterFeedback);
                 }
             } else {
                 game.setGameState(GameState.FINISHED);

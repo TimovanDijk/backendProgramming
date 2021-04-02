@@ -5,11 +5,17 @@ import com.timo.lingoapplication.game.domain.Game;
 import com.timo.lingoapplication.game.domain.GameState;
 import com.timo.lingoapplication.game.domain.GameType;
 import com.timo.lingoapplication.game.persistence.GameRepository;
+import com.timo.lingoapplication.shared.message.GameStateMessage;
+import com.timo.lingoapplication.shared.message.LetterFeedbackMessage;
+import com.timo.lingoapplication.shared.message.LetterState;
 import com.timo.lingoapplication.word.application.WordService;
 import com.timo.lingoapplication.word.domain.Word;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -92,8 +98,10 @@ class GameServiceTest {
 
         Game newGame = correctAnswer.getGame();
 
-        GameStateMessage wrong = new GameStateMessage(false, game, "Your answer of: achtes is not correct.");
-        GameStateMessage correct = new GameStateMessage(true, newGame, "Your answer of: achter is correct!");
+        List<LetterFeedbackMessage> letterFeedbackMessages = new ArrayList<>();
+
+        GameStateMessage wrong = new GameStateMessage(false, game, "Your answer of: achtes is not correct.", letterFeedbackMessages);
+        GameStateMessage correct = new GameStateMessage(true, newGame, "Your answer of: achter is correct!", letterFeedbackMessages);
         GameStateMessage concluded = new GameStateMessage(false, game, "Game has concluded.");
         GameStateMessage noAttempts = new GameStateMessage(false, game, "Maximum number of attempts for this game has been reached.");
 
