@@ -8,10 +8,10 @@ Er is een jenkins omgeving opgezet met automatic deployment op mijn eigen (prive
 De jenkins omgeving connect niet met CodeCov en Sonarcloud om dubbelop versturen te voorkomen.
 
 Het deployment gedeelte gaat door een simpele shell script, die de files naar de omgeving verplaatst, de oude process stopt en de nieuwe start.
-image::.images/postbuild.png[Jenkins Postbuild]
+image::./images/postbuild.png[Jenkins Postbuild]
 
 De output is net als bij github actions te zien.
-image::.images/log.png[Jenkins Log]
+image::./images/log.png[Jenkins Log]
 
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=TimovanDijk_backendProgramming&metric=coverage)](https://sonarcloud.io/dashboard?id=TimovanDijk_backendProgramming)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=TimovanDijk_backendProgramming&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=TimovanDijk_backendProgramming)
