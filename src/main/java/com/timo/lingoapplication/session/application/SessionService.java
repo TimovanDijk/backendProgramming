@@ -1,11 +1,8 @@
 package com.timo.lingoapplication.session.application;
 
-import com.timo.lingoapplication.game.application.GameService;
 import com.timo.lingoapplication.game.domain.Game;
 import com.timo.lingoapplication.player.application.PlayerService;
-import com.timo.lingoapplication.player.application.exception.PlayerNotFound;
 import com.timo.lingoapplication.player.domain.Player;
-import com.timo.lingoapplication.player.persistence.PlayerRepository;
 import com.timo.lingoapplication.session.domain.Session;
 import com.timo.lingoapplication.session.persistence.SessionRepository;
 import org.springframework.beans.factory.annotation.Autowired;

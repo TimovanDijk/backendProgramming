@@ -8,7 +8,6 @@ import com.timo.lingoapplication.game.domain.Game;
 import com.timo.lingoapplication.game.domain.GameState;
 import com.timo.lingoapplication.game.domain.GameType;
 import com.timo.lingoapplication.game.persistence.GameRepository;
-import com.timo.lingoapplication.player.application.exception.PlayerNotFound;
 import com.timo.lingoapplication.session.application.SessionService;
 import com.timo.lingoapplication.shared.message.GameStateMessage;
 import com.timo.lingoapplication.shared.message.LetterFeedbackMessage;
@@ -16,7 +15,6 @@ import com.timo.lingoapplication.word.application.WordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -37,8 +35,7 @@ public class GameService implements GameServiceInterface {
     public Game createGame(GameType gameType) {
         //Set rounds to 0, playerId and the enum states
         Game game = new Game(gameType, GameState.IN_PROGRESS);
-        int length = 5;
-        length = getLength(gameType);
+        int length = getLength(gameType);
         game.setWord(wordService.getRandomWord(length));
         gameRepository.save(game);
 

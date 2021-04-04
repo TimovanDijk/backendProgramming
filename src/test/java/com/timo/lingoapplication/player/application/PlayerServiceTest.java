@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.when;
 
 @DisplayName("PlayerServiceTest")
-public class PlayerServiceTest {
+class PlayerServiceTest {
     private static final Player player = new Player(1l, "name", "password", "email");
     @Test
     @DisplayName("CHECK IF CORRECT PLAYER IS RETURNED")

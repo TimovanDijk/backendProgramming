@@ -24,7 +24,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
 @DisplayName("SessionServiceTest")
-public class SessionServiceTest {
+class SessionServiceTest {
     private static final Word word = new Word(1L, "achter");
     private static final Game game = new Game(1l, 0, word, GameType.SIX_LETTERS, GameState.IN_PROGRESS);
     private static final Player player = new Player(1l, "name", "password", "email");
