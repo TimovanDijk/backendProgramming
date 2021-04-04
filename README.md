@@ -9,10 +9,10 @@ De jenkins omgeving connect niet met CodeCov en Sonarcloud om dubbelop versturen
 
 Het deployment gedeelte gaat door een simpele shell script, die de files naar de omgeving verplaatst, de oude process stopt en de nieuwe start.
 image::./images/postbuild.png[Jenkins Postbuild]
-![Jenkins Postbuild](https://github.com/TimovanDijk/backendProgramming/blob/main/image/afterbuild.png?raw=true)
+![Jenkins Postbuild](https://github.com/TimovanDijk/backendProgramming/blob/main/images/afterbuild.png?raw=true)
 
 De output is net als bij github actions te zien.
-image::./images/log.png[Jenkins Log]
+![Jenkins Log](https://github.com/TimovanDijk/backendProgramming/blob/main/images/log.png?raw=true)
 
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=TimovanDijk_backendProgramming&metric=coverage)](https://sonarcloud.io/dashboard?id=TimovanDijk_backendProgramming)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=TimovanDijk_backendProgramming&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=TimovanDijk_backendProgramming)
