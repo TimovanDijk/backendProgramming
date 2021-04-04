@@ -23,7 +23,6 @@ public class GameController {
         try {
             return gameServiceInterface.createFirstGame(playerId);
         } catch (PlayerNotFound e) {
-            System.out.println(e.getMessage());
             throw new PlayerNotFound(playerId);
         }
     }

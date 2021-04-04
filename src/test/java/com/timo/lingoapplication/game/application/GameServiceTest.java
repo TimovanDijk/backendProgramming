@@ -10,7 +10,6 @@ import com.timo.lingoapplication.game.persistence.GameRepository;
 import com.timo.lingoapplication.session.application.SessionService;
 import com.timo.lingoapplication.shared.message.GameStateMessage;
 import com.timo.lingoapplication.shared.message.LetterFeedbackMessage;
-import com.timo.lingoapplication.shared.message.LetterState;
 import com.timo.lingoapplication.word.application.WordService;
 import com.timo.lingoapplication.word.domain.Word;
 import org.junit.jupiter.api.DisplayName;
