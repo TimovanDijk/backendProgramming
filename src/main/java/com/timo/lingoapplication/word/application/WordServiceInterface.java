@@ -12,7 +12,7 @@ public interface WordServiceInterface {
 
     Word getWordbyId(Long id);
 
-    Word getRandomWord();
+    Word getRandomWord(int length);
 
     boolean checkIfAnswerCorrect(String answer, Long wordId);
 

@@ -5,6 +5,8 @@ import com.timo.lingoapplication.game.domain.Game;
 import com.timo.lingoapplication.game.domain.GameType;
 import com.timo.lingoapplication.shared.message.GameStateMessage;
 
+import java.util.List;
+
 public interface GameServiceInterface {
     Game createGame(GameType gameType);
 
@@ -13,4 +15,8 @@ public interface GameServiceInterface {
     Game saveGame(Game game);
 
     GameStateMessage attemptAnswer(Long gameId, String answerAttempt);
+
+    Game createFirstGame(Long playerId);
+
+    double calculateScore(List<Game> games);
 }

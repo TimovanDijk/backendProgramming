@@ -23,23 +23,36 @@ public class GameStateMessage {
         this.message = message;
     }
 
-    public GameStateMessage() {
-    }
-
     public Boolean getCorrect() {
         return correct;
+    }
+
+    public void setCorrect(Boolean correct) {
+        this.correct = correct;
     }
 
     public Game getGame() {
         return game;
     }
 
+    public void setGame(Game game) {
+        this.game = game;
+    }
+
     public String getMessage() {
         return message;
     }
 
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
     public List<LetterFeedbackMessage> getLetterFeedback() {
         return letterFeedback;
+    }
+
+    public void setLetterFeedback(List<LetterFeedbackMessage> letterFeedback) {
+        this.letterFeedback = letterFeedback;
     }
 
     @Override

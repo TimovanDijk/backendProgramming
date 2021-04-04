@@ -43,8 +43,16 @@ public class WordService implements WordServiceInterface {
     }
 
     @Override
-    public Word getRandomWord() {
-        return wordRepository.getRandomWord();
+    public Word getRandomWord(int length) {
+        Word word = null;
+        while(true) {
+            word = wordRepository.getRandomWord();
+            if (word.getWord().length() == length) {
+                break;
+            }
+        }
+
+        return word;
     }
 
     @Override

@@ -74,10 +74,6 @@ public class Game {
         return gameType;
     }
 
-    public void setGameType(GameType gameType) {
-        this.gameType = gameType;
-    }
-
     public GameState getGameState() {
         return gameState;
     }

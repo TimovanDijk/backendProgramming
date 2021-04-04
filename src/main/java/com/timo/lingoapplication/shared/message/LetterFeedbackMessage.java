@@ -15,12 +15,24 @@ public class LetterFeedbackMessage {
         return position;
     }
 
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
     public String getLetter() {
         return letter;
     }
 
+    public void setLetter(String letter) {
+        this.letter = letter;
+    }
+
     public LetterState getLetterState() {
         return letterState;
+    }
+
+    public void setLetterState(LetterState letterState) {
+        this.letterState = letterState;
     }
 
     @Override
